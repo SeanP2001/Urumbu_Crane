@@ -17,12 +17,14 @@
   - [Laser Cutting](#laser-cutting)
   - [Assembling](#assembling)
 - [Software](#software)
-- [Demonstration](#demonstration)
+- [Build Video and Demonstration](#build-video-and-demonstration)
 - [Conclusion](#conclusion)
 
 ## Introduction
 
-I designed a set of Urumbu USB stepper motor modules for tudents in the FabLAB to rapidly prototype motion systems. I designed and built this crane to test and demonstrate the use of the modules I deseigned. This repository serves as a project for students to reference when they are learning how to use the modules.
+I designed a set of Urumbu USB stepper motor modules for students in the FabLAB to use for rapidly prototype motion systems. The files to create these modules can be found in my ["Urumbu_USB_Stepper_Motor" repostiory](https://github.com/SeanP2001/Urumbu_USB_Stepper_Motor). 
+
+I designed and built this crane to test and demonstrate the use of the modules. This repository serves as documentation of a project which students can reference when learning how to use the modules.
 
 ## Design
 
@@ -48,8 +50,8 @@ Design Features:
 
 Design Features:
 - Mounts the NEMA 14 motor to the aluminium extrusion.
-- Secured to the aluminium extrusio using two M5 tee-nuts.
-- Tensioner pulley for the fishing line to be wound in a figure-eight around both pulleys, increasing friction between the motor pulley and fishing line, preventing it from slipping.
+- Secured to the aluminium extrusion using two M5 tee-nuts.
+- Tensioner pulley increases friction between the motor pulley and fishing line, preventing it from slipping.
 - Tensioner pulley has two bearings to help the fishing line move smoothly.
 
 ### X-Axis Carriage
@@ -59,11 +61,11 @@ Design Features:
 </p>
 
 Design Features:
-- Three M5 bolts secure spacers and Delrin v-wheels 
-- The V-wheel slot into the v-slot linear rail allowing the carriage to glide smoothly along the axis.
+- Three M5 bolts secure spacers and Delrin V-wheels 
+- The V-wheels slot into the V-slot linear rail, allowing the carriage to glide smoothly along the axis.
 - Two holes for tying the x-axis fishing line to.
 - A central pulley, to allow the fishing line to run over it and down to the hook.
-- Two holes for the y-axis fishing line to be tied to after goig through the hook. (There are two symmetrical holes to allow for the fihing line to come fro the left or right side of the crane)
+- Two holes for the y-axis fishing line to be tied to after going through the hook. (There are two symmetrical holes to allow for the fishing line to come from the left or right side of the crane)
 
 ### Tail Pulley
 
@@ -71,7 +73,7 @@ Design Features:
 | --- | --- |
 
 Design Features:
-- 3D printed bracket to secure the pulley to the aluminium extrusion at an angle to match the angle of the fishing line allowing it to travel in a straight line from the motor pulley.
+- 3D printed bracket to secure the pulley to the aluminium extrusion at an angle. The angle matches the angle of the fishing line, allowing it to travel in a straight line from the motor pulley.
 - Mounted to the extrusion with two M5 tee-nuts.
 
 ### Hook
@@ -161,7 +163,7 @@ The 3mm Plywood was placed on the bed of the laser cutter, the laser height and 
 
 ### Assembling
 
-- Slotted frame together.
+- Slotted the frame together.
 - Tapped M5 threads into 80x20x1000mm aluminium extrusion ends.
 - Bolted the end plates to the ends of the aluminium extrusion.
 - Screwed the end plates to the frame.
@@ -190,9 +192,9 @@ The 3mm Plywood was placed on the bed of the laser cutter, the laser height and 
 | --- | --- |
 
 - Secured the carriage pulley to the carriage using a spacer with an M5 nut and bolt.
-- Bolted the top two Delrin v-wheels to the carriage with spacers along with M5 nuts and bolts.
-- Placed the carriage on the extrusion with the top v-wheels slotted into the top v-slot.
-- Held the third v-wheel in place underneath the extrusion and secured it to the carriage.
+- Bolted the top two Delrin V-wheels to the carriage with spacers along with M5 nuts and bolts.
+- Placed the carriage on the extrusion with the top V-wheels slotted into the top V-slot.
+- Held the third V-wheel in place underneath the extrusion and secured it to the carriage.
 
 |  <img src="./Images/Build/Carriage_Front.jpg"> | <img src="./Images/Build/Carriage_Back.jpg"> |
 | --- | --- |
@@ -224,8 +226,16 @@ The complete crane was assembled in less than three hours.
 
 ## Software
 
+I programmed a graphical controller program in Python using the PySimpleGUI library. The graphical interface allows users to select the USB port for each motor and connect to them. They can set upper and lower limits for each axis, change the movement speed and control the crane.
 
+<p align="center">
+  <img src="./Images/CraneControllerGUI.png">
+</p>
 
-## Demonstration
+## Build Video and Demonstration
+
+[<img src="./Images/Youtube_Video_Screenshot.png" />](https://www.youtube.com/watch?v=1Sd0MmUDr9s&ab_channel=SeanPrice)
 
 ## Conclusion
+
+The modules were quick and easy to use to prototype a working motion system. They were reliable, which made troubleshooting my code much easier. One area of improvement is that inefficiencies in the code caused the crane to move slowly at times. Using multiple CPU cores would allow multiple sections of code to run simultaneously, allowing the crane to run at full speed.
